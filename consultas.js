@@ -1,5 +1,5 @@
-const { Pool } = require("pg");
-const bcrypt = require("bcryptjs");
+import { Pool } from "pg"
+import bcrypt from "bcryptjs"
 
 const pool = new Pool({
   host: "containers-us-west-75.railway.app",

@@ -1,6 +1,7 @@
 import express from "express"
-const jwt = require("jsonwebtoken");
-const cors = require("cors");
+import jwt from "jsonwebtoken"
+import cors from "cors"
+
 const {
   nuevoUsuario,
   verificarCredenciales,
