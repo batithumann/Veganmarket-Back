@@ -15,7 +15,7 @@ const {
 
 const app = express();
 
-app.listen(4003, console.log("Servidor iniciado en puerto 4000"));
+app.listen(process.env.PORT, console.log("Servidor iniciado en puerto 4000"));
 
 app.use(cors());
 app.use(express.json());
