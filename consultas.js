@@ -2,10 +2,10 @@ const { Pool } = require("pg");
 const bcrypt = require("bcryptjs");
 
 const pool = new Pool({
-  host: "localhost",
+  host: "containers-us-west-75.railway.app",
   user: "postgres",
-  password: "postgres",
-  database: "marketplace",
+  password: "YriyQ26M41fijZM7dkcu",
+  database: "railway",
   allowExitOnIdle: true,
 });
 
