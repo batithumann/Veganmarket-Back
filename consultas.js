@@ -1,10 +1,10 @@
-import { Pool } from "pg"
-import bcrypt from "bcryptjs"
+const { Pool } = require("pg");
+const bcrypt = require("bcryptjs");
 
 const pool = new Pool({
   host: "containers-us-west-75.railway.app",
   user: "postgres",
-  password: import.meta.env.RAILWIND_PG_PASSWORD,
+  password: process.env.RAILWIND_PG_PASSWORD,
   database: "railway",
   port: 6589,
   allowExitOnIdle: true,

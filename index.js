@@ -1,8 +1,7 @@
-import express from "express"
-import jwt from "jsonwebtoken"
-import cors from "cors"
-
-import {
+const express = require("express");
+const jwt = require("jsonwebtoken");
+const cors = require("cors");
+const {
   nuevoUsuario,
   verificarCredenciales,
   getUser,
@@ -12,13 +11,11 @@ import {
   agregarFavorito,
   getFavoritos,
   eliminarFavorito,
-} from "./consultas.js"
+} = require("./consultas");
 
 const app = express();
 
-
-
-app.listen(4002, console.log("Servidor iniciado en puerto 4000"));
+app.listen(4003, console.log("Servidor iniciado en puerto 4000"));
 
 app.use(cors());
 app.use(express.json());
@@ -33,7 +30,6 @@ app.post("/usuario", async (req, res) => {
     res.status(error.code || 500).send(error);
   }
 });
-
 
 // Login
 app.post("/login", async (req, res) => {
