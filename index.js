@@ -2,7 +2,7 @@ import express from "express"
 import jwt from "jsonwebtoken"
 import cors from "cors"
 
-const {
+import {
   nuevoUsuario,
   verificarCredenciales,
   getUser,
@@ -12,9 +12,11 @@ const {
   agregarFavorito,
   getFavoritos,
   eliminarFavorito,
-} = require("./consultas");
+} from "./consultas"
 
 const app = express();
+
+
 
 app.listen(4002, console.log("Servidor iniciado en puerto 4000"));
 
