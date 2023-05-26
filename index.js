@@ -12,7 +12,7 @@ import {
   agregarFavorito,
   getFavoritos,
   eliminarFavorito,
-} from "./consultas"
+} from "./consultas.js"
 
 const app = express();
 
