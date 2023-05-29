@@ -2,11 +2,11 @@ const { Pool } = require("pg");
 const bcrypt = require("bcryptjs");
 
 const pool = new Pool({
-  host: "containers-us-west-75.railway.app",
-  user: "postgres",
-  password: process.env.RAILWIND_PG_PASSWORD,
-  database: "railway",
-  port: 6589,
+  host: process.env.PGHOST,
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  database: process.env.PGDATABASE,
+  port: process.env.PGPORT,
   allowExitOnIdle: true,
 });
 
